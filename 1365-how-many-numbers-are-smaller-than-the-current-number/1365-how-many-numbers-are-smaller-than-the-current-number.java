@@ -1,16 +1,16 @@
 class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
-        int[] answer;
+        int[] answer = new int[nums.length];
 
-        for (i=0; i< nums.length; nums++) {
+        for (int i=0; i< nums.length; i++) {
             int counter = 0;
-            for (j=0;j<nums.length;j++) {
+            for (int j=0;j<nums.length;j++) {
                 if (nums[j] < nums[i]) {
                     counter++;
                 }
             }
             answer[i] = counter;
         }
-
+        return answer;
     }
 }
